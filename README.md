@@ -1,6 +1,6 @@
 **Aplicação consome dados via requisição REST.**
 
-**TODO** *Levantar cobertura de testes unitarios da aplicação.
+**TODO**  *Levantar cobertura de testes unitarios da aplicação.*
 
 **Enpoints para uso das funcionalidades:**
 
