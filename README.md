@@ -1,32 +1,33 @@
-Aplicação consome dados via requisição REST.
+**Aplicação consome dados via requisição REST.**
 
-Enpoints para uso das funcionalidades:
+**Enpoints para uso das funcionalidades:**
 
-#BUSCA UM PLANETA PELO ID, CASO NÃO ENCONTRE NO BANCO, CONSULTA NO SWAPI.DEV E ARMAZENA NO BANCO DE DADOS.
-curl --request GET \
-  --url http://localhost:8080/planet/v2/1
+* BUSCA UM PLANETA PELO ID, CASO NÃO ENCONTRE NO BANCO, CONSULTA NO SWAPI.DEV E ARMAZENA NO BANCO DE DADOS:
+
+`curl --request GET \
+  --url http://localhost:8080/planet/v2/1`
   
-#BUSCA UM PLANETA PELO NOME, CASO NÃO ENCONTRE NO BANCO, RETORNA UM 404, INFORMANDO PARA USAR ID COMO BUSCA.
+* BUSCA UM PLANETA PELO NOME, CASO NÃO ENCONTRE NO BANCO, RETORNA UM 404, INFORMANDO PARA USAR ID COMO BUSCA:
 
-curl --request GET \
-  --url http://localhost:8080/planet/v1/Tatooine
+`curl --request GET \
+  --url http://localhost:8080/planet/v1/Tatooine`
   
   
-#BUSCA POR TODOS OS PLANETAS SALVOS NO BANCO DE DADOS.
+* BUSCA POR TODOS OS PLANETAS SALVOS NO BANCO DE DADOS:
 
-curl --request GET \
-  --url http://localhost:8080/planet
-
-
-#DELETA UM PLANETA PELO IDENTIFICADOR.
-
-curl --request DELETE \
-  --url http://localhost:8080/planet/1
+`curl --request GET \
+  --url http://localhost:8080/planet`
 
 
-#CRIA UM PLANETA, USANDO O IDENTIFICADOR COMO CHAVE, NÃO PODENDO SER NULL, 0 OU EXISTENTE NO BANCO DE DADOS.
+* DELETA UM PLANETA PELO IDENTIFICADOR:
 
-curl --request POST \
+`curl --request DELETE \
+  --url http://localhost:8080/planet/1`
+
+
+* CRIA UM PLANETA, USANDO O IDENTIFICADOR COMO CHAVE, NÃO PODENDO SER NULL, 0 OU EXISTENTE NO BANCO DE DADOS:
+
+`curl --request POST \
   --url http://localhost:8080/planet/ \
   --header 'Content-Type: application/json' \
   --data '{
@@ -62,4 +63,4 @@ curl --request POST \
             "mglt": "60"
           }
         ] 
-     }'
+     }'`
