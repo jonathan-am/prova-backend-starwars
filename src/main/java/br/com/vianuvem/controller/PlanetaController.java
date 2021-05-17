@@ -11,6 +11,9 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+/**
+ * Classe Controller da aplicação
+ */
 @RestController
 public class PlanetaController {
 
@@ -22,19 +25,7 @@ public class PlanetaController {
     @PostMapping("/planet")
     @ResponseBody
     public PlanetaEntity createPlanet(@RequestBody PlanetaEntity entity) {
-        if (entity.getIdentifier() != 0) {
-            try {
-                if (service.getByIdentifier(entity.getIdentifier()) == null) {
-                    return service.create(entity);
-                } else {
-                    throw new CreateErrorException("Erro ao criar o planeta. Verifique se já existe um Planeta com este `Identificador`.");
-                }
-            } catch (NaoEncontradoException e) {
-                return service.create(entity);
-            }
-        } else {
-            throw new CreateErrorException("Erro ao criar o planeta. Verifique se o parametro `identifier` não é null, ou valor 0!");
-        }
+        return business.createPlanet(entity);
     }
 
     @DeleteMapping("/planet/{identifier}")
@@ -53,7 +44,7 @@ public class PlanetaController {
     @GetMapping("/planet/v1/{name}")
     @ResponseBody
     public PlanetaEntity getPlanetByName(@PathVariable String name) {
-        return business.getPlanetByName(name);
+        return service.getByName(name);
     }
 
     @GetMapping("/planet/v2/{identifier}")

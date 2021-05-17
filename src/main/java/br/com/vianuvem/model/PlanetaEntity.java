@@ -4,6 +4,9 @@ import org.springframework.data.annotation.Id;
 
 import java.util.List;
 
+/**
+ * Entidade Planeta
+ */
 public class PlanetaEntity {
 
     @Id

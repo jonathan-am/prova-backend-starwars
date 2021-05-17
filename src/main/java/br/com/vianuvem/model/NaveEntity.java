@@ -2,6 +2,9 @@ package br.com.vianuvem.model;
 
 import java.util.List;
 
+/**
+ * Entidade Nave
+ */
 public class NaveEntity {
 
     private String name;

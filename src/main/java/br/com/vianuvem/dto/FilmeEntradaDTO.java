@@ -2,6 +2,9 @@ package br.com.vianuvem.dto;
 
 import java.util.List;
 
+/**
+ * DTO com dados de entrada pela API ou client response
+ */
 public class FilmeEntradaDTO {
 
     private String title;

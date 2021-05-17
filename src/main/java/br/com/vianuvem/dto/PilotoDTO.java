@@ -1,5 +1,8 @@
 package br.com.vianuvem.dto;
 
+/**
+ * DTO com dados de entrada pela API ou client response
+ */
 public class PilotoDTO {
 
     private String name;

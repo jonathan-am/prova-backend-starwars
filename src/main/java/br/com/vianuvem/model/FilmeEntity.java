@@ -3,6 +3,9 @@ package br.com.vianuvem.model;
 
 import java.util.List;
 
+/**
+ * Entidade Filme
+ */
 public class FilmeEntity {
 
     private String titulo;

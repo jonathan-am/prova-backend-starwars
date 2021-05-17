@@ -4,6 +4,9 @@ import br.com.vianuvem.model.FilmeEntity;
 
 import java.util.List;
 
+/**
+ * DTO com dados de entrada pela API ou client response
+ */
 public class PlanetaEntradaDTO {
 
     private String name;
