@@ -1,5 +1,7 @@
 **Aplicação consome dados via requisição REST.**
 
+**TODO**  *Levantar cobertura de testes unitarios da aplicação.*
+
 **Enpoints para uso das funcionalidades:**
 
 * BUSCA UM PLANETA PELO ID, CASO NÃO ENCONTRE NO BANCO, CONSULTA NO SWAPI.DEV E ARMAZENA NO BANCO DE DADOS:
