@@ -1,33 +1,33 @@
-**Aplicação consome dados via requisição REST.**
+**Application consumes data via REST request.**
 
-**TODO**  *Levantar cobertura de testes unitarios da aplicação.*
+**TODO** *Raise application unit test coverage.*
 
-**Enpoints para uso das funcionalidades:**
+**Indications for using the features:**
 
-* BUSCA UM PLANETA PELO ID, CASO NÃO ENCONTRE NO BANCO, CONSULTA NO SWAPI.DEV E ARMAZENA NO BANCO DE DADOS:
+* SEARCH FOR A PLANET BY ID, IF YOU DON'T FIND IT IN THE BANK, CONSULT IT IN SWAPI.DEV AND STORE IT IN THE DATABASE:
 
 `curl --request GET \
   --url http://localhost:8080/planet/v2/1`
   
-* BUSCA UM PLANETA PELO NOME, CASO NÃO ENCONTRE NO BANCO, RETORNA UM 404, INFORMANDO PARA USAR ID COMO BUSCA:
+* SEARCH FOR A PLANET BY NAME, IF YOU DON'T FIND IT IN THE BANK, A 404 WILL BE RETURNED, INFORMING YOU TO USE ID AS SEARCH:
 
-`curl --request GET \
+`curl --request GET\
   --url http://localhost:8080/planet/v1/Tatooine`
   
   
-* BUSCA POR TODOS OS PLANETAS SALVOS NO BANCO DE DADOS:
+* SEARCH FOR ALL PLANETS SAVED IN THE DATABASE:
 
-`curl --request GET \
+`curl --request GET\
   --url http://localhost:8080/planet`
 
 
-* DELETA UM PLANETA PELO IDENTIFICADOR:
+* DELETE A PLANET BY IDENTIFIER:
 
-`curl --request DELETE \
+`curl --request DELETE\
   --url http://localhost:8080/planet/1`
 
 
-* CRIA UM PLANETA, USANDO O IDENTIFICADOR COMO CHAVE, NÃO PODENDO SER NULL, 0 OU EXISTENTE NO BANCO DE DADOS:
+* CREATES A PLANET, USING THE IDENTIFIER AS A KEY, IT CANNOT BE NULL, 0 OR EXISTING IN THE DATABASE:
 
 `curl --request POST \
   --url http://localhost:8080/planet/ \
